@@ -50,6 +50,7 @@ func TestAccAWSKinesisStreamDataSource_basic(t *testing.T) {
 					resource.TestCheckResourceAttr("data.aws_kinesis_stream.test_stream", "retention_period", "72"),
 					resource.TestCheckResourceAttrSet("data.aws_kinesis_stream.test_stream", "creation_timestamp"),
 					resource.TestCheckResourceAttr("data.aws_kinesis_stream.test_stream", "tags.Name", "tf-test"),
+					resource.TestCheckResourceAttr("data.aws_kinesis_stream.test_stream", "consumers_count", "1"),
 				),
 			},
 			{
@@ -66,6 +67,7 @@ func TestAccAWSKinesisStreamDataSource_basic(t *testing.T) {
 					resource.TestCheckResourceAttr("data.aws_kinesis_stream.test_stream", "retention_period", "72"),
 					resource.TestCheckResourceAttrSet("data.aws_kinesis_stream.test_stream", "creation_timestamp"),
 					resource.TestCheckResourceAttr("data.aws_kinesis_stream.test_stream", "tags.Name", "tf-test"),
+					resource.TestCheckResourceAttr("data.aws_kinesis_stream.test_stream", "consumers_count", "1"),
 				),
 			},
 		},
